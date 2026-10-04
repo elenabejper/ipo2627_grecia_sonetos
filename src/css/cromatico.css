@@ -1,0 +1,61 @@
+/* Paleta monocromática: todas las variantes comparten el matiz 35. */
+:root {
+  color-scheme: light;
+  --matiz: 35;
+  --color-fondo: hsl(var(--matiz) 30% 95%);
+  --color-texto: hsl(var(--matiz) 10% 15%);
+  --color-secundario: hsl(var(--matiz) 8% 35%);
+  --color-linea: hsl(var(--matiz) 12% 80%);
+  --color-seleccion: hsl(var(--matiz) 22% 88%);
+  --color-hover: hsl(var(--matiz) 25% 91%);
+}
+
+body {
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+.cabecera,
+.menu,
+.pie {
+  border-color: var(--color-linea);
+}
+
+.cabecera__descripcion,
+.menu__autor,
+.soneto__autor,
+.pie,
+.aviso {
+  color: var(--color-secundario);
+}
+
+.menu__boton {
+  color: var(--color-texto);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.menu__boton:hover {
+  background-color: var(--color-hover);
+}
+
+.menu__boton[aria-pressed="true"] {
+  background-color: var(--color-seleccion);
+  border-inline-start-color: var(--color-texto);
+}
+
+.reintentar,
+.salto {
+  color: var(--color-fondo);
+  background-color: var(--color-texto);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-texto);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: var(--color-fondo);
+  background-color: var(--color-texto);
+}

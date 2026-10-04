@@ -1,0 +1,159 @@
+:root {
+  --ancho-pagina: 80rem;
+  --margen-pagina: clamp(1.25rem, 4vw, 4rem);
+  --separacion-principal: clamp(2rem, 5vw, 5rem);
+}
+
+/* El pie sigue al contenido y queda abajo cuando la página es corta. */
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera,
+.principal,
+.pie {
+  width: min(100%, var(--ancho-pagina));
+  margin-inline: auto;
+  padding-inline: var(--margen-pagina);
+}
+
+.cabecera {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  padding-block: 2rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.principal {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(13rem, 16rem) minmax(0, 1fr);
+  gap: var(--separacion-principal);
+  padding-block: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.menu {
+  padding-inline-end: 1.5rem;
+  border-inline-end-width: 1px;
+  border-inline-end-style: solid;
+}
+
+.menu__titulo {
+  margin-block-end: 1.25rem;
+}
+
+.menu__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__boton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.875rem 0.75rem;
+  border-width: 0 0 0 3px;
+  border-style: solid;
+}
+
+.lectura,
+.soneto {
+  min-width: 0;
+}
+
+.soneto {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 42rem;
+}
+
+.soneto__cabecera {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.soneto__estrofas {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.soneto__verso {
+  display: block;
+  padding-inline-start: 1em;
+}
+
+.pie {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  padding-block: 1.5rem;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.reintentar {
+  margin-block-start: 1rem;
+  padding: 0.75rem 1rem;
+  min-height: 2.75rem;
+  border: 0;
+}
+
+/* Solo las ayudas de accesibilidad necesitan salir del flujo normal. */
+.aviso--oculto,
+.salto:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.salto:focus {
+  align-self: flex-start;
+  margin: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+@media (max-width: 48rem) {
+  .principal {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .menu {
+    padding-inline-end: 0;
+    padding-block-end: 1.5rem;
+    border-inline-end-width: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  .menu__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  }
+
+  .soneto {
+    max-width: 100%;
+    gap: 2rem;
+  }
+}

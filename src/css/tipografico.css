@@ -1,0 +1,72 @@
+/* Una familia con serifa; jerarquía mediante tamaño y peso. */
+:root {
+  --fuente-principal: Georgia, serif;
+  --peso-normal: 400;
+  --peso-destacado: 700;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+  font-weight: var(--peso-normal);
+  line-height: 1.5;
+}
+
+.cabecera__titulo {
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  font-weight: var(--peso-destacado);
+  line-height: 1.15;
+}
+
+.cabecera__descripcion,
+.pie {
+  font-size: 0.9375rem;
+}
+
+.menu__titulo {
+  font-size: 1rem;
+  font-weight: var(--peso-destacado);
+}
+
+.menu__boton {
+  text-align: start;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.menu__boton[aria-pressed="true"] {
+  font-weight: var(--peso-destacado);
+}
+
+.menu__autor {
+  font-size: 0.875rem;
+  font-weight: var(--peso-normal);
+}
+
+.soneto__titulo {
+  font-size: clamp(2rem, 1.4rem + 2.4vw, 3.75rem);
+  font-weight: var(--peso-destacado);
+  line-height: 1.1;
+  overflow-wrap: break-word;
+}
+
+.soneto__autor {
+  font-size: 1rem;
+}
+
+.soneto__estrofa {
+  font-size: clamp(1.125rem, 1rem + 0.3vw, 1.25rem);
+  line-height: 1.7;
+  text-align: start;
+  overflow-wrap: break-word;
+}
+
+/* Si un verso ocupa dos líneas en móvil, su continuación queda sangrada. */
+.soneto__verso {
+  text-indent: -1em;
+}
+
+.reintentar,
+.salto {
+  font-weight: var(--peso-destacado);
+}

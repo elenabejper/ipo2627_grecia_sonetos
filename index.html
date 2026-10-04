@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sonetos — Lector de poesía</title>
+
+  <link rel="stylesheet" href="./src/css/base.css">
+  <link rel="stylesheet" href="./src/css/cromatico.css">
+  <link rel="stylesheet" href="./src/css/tipografico.css">
+  <link rel="stylesheet" href="./src/css/espacial.css">
+
+  <script type="module" src="./src/js/main.js"></script>
+</head>
+
+<body>
+  <a class="salto" href="#lectura">Saltar al soneto</a>
+
+  <header class="cabecera">
+    <h1 class="cabecera__titulo">Sonetos</h1>
+  </header>
+
+  <main class="principal" id="principal" aria-busy="true">
+    <nav class="menu" aria-labelledby="titulo-menu">
+      <h2 class="menu__titulo" id="titulo-menu">
+        Sonetos disponibles
+      </h2>
+
+      <!-- JavaScript añadirá los botones de los cinco sonetos. -->
+      <ul class="menu__lista" id="lista-sonetos"></ul>
+    </nav>
+
+    <div class="lectura" id="lectura" tabindex="-1">
+      <p class="aviso" id="estado" role="status" aria-live="polite">
+        Cargando sonetos…
+      </p>
+
+      <p class="aviso" id="error" role="alert" hidden></p>
+
+      <button
+        class="reintentar"
+        id="reintentar"
+        type="button"
+        hidden
+      >
+        Volver a intentar
+      </button>
+
+      <article
+        class="soneto"
+        id="soneto"
+        aria-labelledby="titulo-soneto"
+        hidden
+      >
+        <header class="soneto__cabecera">
+          <h2 class="soneto__titulo" id="titulo-soneto"></h2>
+          <p class="soneto__autor" id="autor-soneto"></p>
+        </header>
+
+        <!-- JavaScript añadirá los cuatro párrafos del soneto. -->
+        <div class="soneto__estrofas" id="estrofas-soneto"></div>
+      </article>
+
+      <noscript>
+        <p>Activa JavaScript para elegir y leer los sonetos.</p>
+      </noscript>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <p>Interacción Persona Ordenador</p>
+    <p>Desarrollado por: Nombre y apellidos</p>
+  </footer>
+</body>
+</html>
