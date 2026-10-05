@@ -18,8 +18,7 @@ body {
   line-height: 1.15;
 }
 
-.cabecera__descripcion,
-.pie {
+.cabecera__descripcion {
   font-size: 0.9375rem;
 }
 

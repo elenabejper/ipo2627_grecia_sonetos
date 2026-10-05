@@ -51,8 +51,35 @@ Se empleará una **paleta monocromática cálida**, con fondo marfil y tonos osc
 Se utilizará una única familia con serifa, **Palatino Linotype**, con `serif` como alternativa. La jerarquía visual se establecerá mediante diferentes tamaños y pesos, reservando la negrita para títulos y elementos destacados. Los versos estarán alineados a la izquierda, con interlineado cómodo y tamaños expresados en `rem`.
 
 ### Diseño espacial
-Se utilizarán contenedores HTML semánticos (`header`, `main`, `article` y `footer`), **Grid** para la distribución principal y **Flexbox** para la cabecera. En escritorio, el título y el autor aparecerán a la izquierda y los versos a la derecha; en pantallas estrechas, se organizarán en una columna.
+Se utilizarán contenedores HTML semánticos (`header`, `main`, `article` y `footer`), **Grid** para la distribución principal y **Flexbox** para la cabecera. En escritorio, el menú de selección aparecerá a la izquierda y el soneto completo a la derecha, con el título y el autor sobre las estrofas. En pantallas estrechas, 
+el menú se situará encima del soneto.
 
 Se emplearán unidades relativas (`rem`, `%` y `fr`), junto con `max-width` y `clamp()`, evitando dimensiones rígidas. Se aplicarán los principios Gestalt de **proximidad**, agrupando título y autor y separando las cuatro estrofas; **semejanza**, manteniendo estilos coherentes; y **figura-fondo**, destacando el contenido mediante contraste y espacio libre.
 
 Los estilos cromáticos, tipográficos y espaciales se organizarán en archivos CSS diferenciados.
+
+## Ejecución del proyecto con Live Server
+
+El proyecto está desarrollado con **HTML, CSS y JavaScript nativos**, por lo que no necesita instalar dependencias adicionales.
+
+Para ejecutarlo correctamente se recomienda utilizar la extensión **Live Server** de Visual Studio Code.
+
+### Pasos
+
+1. Abrir la carpeta del proyecto en **Visual Studio Code**.
+2. Instalar la extensión **Live Server** si todavía no está instalada.
+3. Abrir el archivo `index.html`.
+4. Pulsar con el botón derecho sobre `index.html`.
+5. Seleccionar **Open with Live Server**.
+
+También se puede iniciar pulsando el botón **Go Live** situado en la barra inferior de Visual Studio Code.
+
+El navegador se abrirá automáticamente con una dirección similar a:
+
+```text
+http://127.0.0.1:5500/
+```
+
+A partir de ese momento, los cambios realizados en los archivos HTML, CSS o JavaScript se actualizarán automáticamente en el navegador al guardar los archivos.
+
+> Se recomienda utilizar Live Server en lugar de abrir directamente el archivo `index.html`, ya que permite ejecutar el proyecto mediante un servidor local y evita posibles problemas con la carga de recursos.
