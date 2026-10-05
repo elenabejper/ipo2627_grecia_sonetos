@@ -8,11 +8,19 @@
   --color-linea: hsl(var(--matiz) 12% 80%);
   --color-seleccion: hsl(var(--matiz) 22% 88%);
   --color-hover: hsl(var(--matiz) 25% 91%);
+  --color-cabecera: hsl(var(--matiz) 24% 88%);
+  --color-pie: hsl(var(--matiz) 25% 15%);
+  --color-sobre-pie: hsl(var(--matiz) 30% 95%);
+  --color-secundario-pie: hsl(var(--matiz) 20% 80%);
 }
 
 body {
   color: var(--color-texto);
   background-color: var(--color-fondo);
+}
+
+.cabecera {
+  background-color: var(--color-cabecera);
 }
 
 .cabecera,
@@ -24,7 +32,6 @@ body {
 .cabecera__descripcion,
 .menu__autor,
 .soneto__autor,
-.pie,
 .aviso {
   color: var(--color-secundario);
 }
@@ -58,4 +65,14 @@ body {
 ::selection {
   color: var(--color-fondo);
   background-color: var(--color-texto);
+}
+
+.pie {
+  background-color: var(--color-pie);
+  color: var(--color-sobre-pie);
+}
+
+.pie__etiqueta,
+.pie__curso {
+  color: var(--color-secundario-pie);
 }

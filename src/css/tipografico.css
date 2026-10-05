@@ -1,6 +1,6 @@
 /* Una familia con serifa; jerarquía mediante tamaño y peso. */
 :root {
-  --fuente-principal: Georgia, serif;
+  --fuente-principal: "Palatino Linotype", Palatino, serif;
   --peso-normal: 400;
   --peso-destacado: 700;
 }
@@ -55,8 +55,8 @@ body {
 }
 
 .soneto__estrofa {
-  font-size: clamp(1.125rem, 1rem + 0.3vw, 1.25rem);
-  line-height: 1.7;
+  font-size: clamp(1.2rem, 1rem + 0.4vw, 1.35rem);
+  line-height: 1.8;
   text-align: start;
   overflow-wrap: break-word;
 }
@@ -69,4 +69,23 @@ body {
 .reintentar,
 .salto {
   font-weight: var(--peso-destacado);
+}
+
+.pie {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.pie__etiqueta {
+  font-size: 0.875rem;
+  font-weight: var(--peso-destacado);
+}
+
+.pie__titulo {
+  font-size: clamp(1.25rem, 1rem + 0.5vw, 1.6rem);
+  font-weight: var(--peso-destacado);
+}
+
+.pie__autores {
+  font-size: 1.125rem;
 }

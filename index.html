@@ -17,9 +17,19 @@
 <body>
   <a class="salto" href="#lectura">Saltar al soneto</a>
 
+  <!-- CABECERA -->
   <header class="cabecera">
+  <div class="cabecera__contenido">
+    <img
+      class="cabecera__icono"
+      src="./assets/img/poema.png"
+      alt=""
+      width="512"
+      height="512"
+    >
     <h1 class="cabecera__titulo">Sonetos</h1>
-  </header>
+  </div>
+</header>
 
   <main class="principal" id="principal" aria-busy="true">
     <nav class="menu" aria-labelledby="titulo-menu">
@@ -68,9 +78,24 @@
     </div>
   </main>
 
+
+  <!-- PIE DE PÁGINA -->
   <footer class="pie">
-    <p>Interacción Persona-Ordenador</p>
-    <p>Desarrollado por: Elena Bejarano Periñán e Isaac Rodríguez Godino</p>
+    <div class="pie__contenido">
+      <div class="pie__bloque">
+        <p class="pie__etiqueta">Asignatura</p>
+        <p class="pie__titulo">Interacción Persona-Ordenador</p>
+        <p class="pie__curso">Curso 2026/27</p>
+      </div>
+
+      <div class="pie__bloque">
+        <p class="pie__etiqueta">Desarrollado por</p>
+        <ul class="pie__autores">
+          <li>Elena Bejarano Periñán</li>
+          <li>Isaac Rodríguez Godino</li>
+        </ul>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

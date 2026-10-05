@@ -12,23 +12,30 @@ body {
   flex-direction: column;
 }
 
-.cabecera,
+.cabecera__contenido,
 .principal,
-.pie {
+.pie__contenido {
   width: min(100%, var(--ancho-pagina));
   margin-inline: auto;
   padding-inline: var(--margen-pagina);
 }
 
 .cabecera {
+  width: 100%;
+}
+
+.cabecera__contenido {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem 2rem;
-  padding-block: 2rem;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1.75rem;
+}
+
+.cabecera__icono {
+  width: clamp(2.5rem, 5vw, 3.5rem);
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .principal {
@@ -99,13 +106,29 @@ body {
 }
 
 .pie {
+  width: 100%;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.pie__contenido {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+.pie__bloque {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
-  padding-block: 1.5rem;
-  border-top-width: 1px;
-  border-top-style: solid;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.pie__autores {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0;
+  list-style: none;
 }
 
 .reintentar {
@@ -155,5 +178,9 @@ body {
   .soneto {
     max-width: 100%;
     gap: 2rem;
+  }
+
+  .pie__contenido {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
