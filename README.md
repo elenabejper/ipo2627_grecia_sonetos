@@ -48,7 +48,7 @@ La implementación de la interacción estará guiada para favorecer la usabilida
 Se empleará una **paleta monocromática cálida**, con fondo marfil y tonos oscuros para el texto. Los colores compartirán el mismo matiz, variando su saturación y luminosidad para establecer jerarquías y asegurar un contraste legible. Se definirán mediante variables CSS en `:root`, utilizando HSL.
 
 ### Diseño tipográfico
-Se utilizará una única familia con serifa, **Georgia**, con `serif` como alternativa. La jerarquía visual se establecerá mediante diferentes tamaños y pesos, reservando la negrita para títulos y elementos destacados. Los versos estarán alineados a la izquierda, con interlineado cómodo y tamaños expresados en `rem`.
+Se utilizará una única familia con serifa, **Palatino Linotype**, con `serif` como alternativa. La jerarquía visual se establecerá mediante diferentes tamaños y pesos, reservando la negrita para títulos y elementos destacados. Los versos estarán alineados a la izquierda, con interlineado cómodo y tamaños expresados en `rem`.
 
 ### Diseño espacial
 Se utilizarán contenedores HTML semánticos (`header`, `main`, `article` y `footer`), **Grid** para la distribución principal y **Flexbox** para la cabecera. En escritorio, el título y el autor aparecerán a la izquierda y los versos a la derecha; en pantallas estrechas, se organizarán en una columna.
